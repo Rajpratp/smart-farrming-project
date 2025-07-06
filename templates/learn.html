@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn Agriculture</title>
+
+
+    <!-- bootstrap link-->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+
+    <!--Fontawesome link-->
+
+    <script src="https://kit.fontawesome.com/ac6870aa6c.js" crossorigin="anonymous"></script>
+
+    <!--css link -->
+
+    <!-- <link rel="stylesheet" href="weather.css"> -->
+
+
+    <!-- css -->
+    <style>
+
+
+.navbar-toggler-icon {
+  transition: transform 0.3s ease-in-out;
+}
+
+.navbar-toggler:hover .navbar-toggler-icon {
+  transform: rotate(180deg);
+}
+.fa-house-person-return{
+  color: aliceblue;
+}
+
+  #b{
+  color: green;  font-size: 60px; text-shadow: 2px 1px rgb(184, 237, 105);
+  }
+  #c{
+    height: 300px;  display: flex; flex-wrap: wrap; justify-content: center; 
+  }
+#d{
+  border-radius: 3%; overflow: hidden; border: 2px green solid;
+}
+
+  #eeeee {
+    display: flex;
+    flex-wrap: wrap;
+  justify-content: center;
+} 
+
+.box {
+    width: 20%;
+    height: 270px;
+    min-width: 150px;
+    margin: 65px;
+    background-color: rgb(69, 90, 69); color: white;
+    display: flex; flex-wrap: wrap; justify-content: space-evenly; align-items: center;
+    text-align: center;
+    font-size: 40px;
+    border-radius: 20%;
+   cursor: pointer;
+}
+.box:hover{
+  transform: scale(1.1);
+}
+@media (max-width: 600px) {
+  .box {
+      width: 45%; /* Adjust width for smaller screens */
+  }
+}
+
+@media (max-width: 400px) {
+  .box {
+      width: 90%; /* Stacks boxes for very small screens */
+  }
+}
+#e{
+  width: 10%; border: 3px wheat solid; box-shadow: 4px 3px green;
+}
+.footer-container {
+  background-color: #333;
+  color: white; font-size: 30px; 
+  text-align: center;height: 200px;
+  padding: 10px; 
+}
+
+.footer-links {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-links li {
+  display: inline;
+   margin: 0 15px;
+    }
+    
+    .footer-links a {
+        color: white;
+        text-decoration: none; margin: 4%;
+    }
+    
+    .footer-links a:hover {
+        text-decoration: underline;
+    }
+
+.foot {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 15px;
+  background: white;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: black;
+  font-size: 35px;
+    text-decoration: none;
+    transition: transform 0.3s ease-in-out;
+}
+
+.footer-icon span {
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+.footer-icon:hover {
+    transform: scale(1.2);
+    color: green;
+}
+.footer{
+  flex-direction: column;
+}
+#f{
+  font-size: 20px;
+}
+#g {
+  color: azure;
+  font-family: 'Poppins', sans-serif; /* Use a modern font */
+  font-size: 48px; /* Make it stand out */
+  font-weight: bold; /* Give it a strong presence */
+  color: bisque; /* Green shade for an agricultural theme */
+  text-transform: uppercase; /* Keep the logo fully capitalized */
+  letter-spacing: 5px; /* Spaced-out letters for impact */
+  text-shadow: 3px 3px 5px rgba(223, 216, 216, 0.8); /* Adds depth */
+}
+#h{
+  color: aliceblue;
+}
+
+
+
+
+        #aa {
+            font-family: "Poppins", sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(120deg, #A2C4BC, #4CAF50);
+            color: #333;
+        }
+
+        #bb {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        #cc {
+            color: #2E7D32;
+            font-size: 2.5em;
+        }
+
+        #dd {
+            margin: 20px 0;
+            padding: 15px;
+            border-radius: 8px;
+            background: #E8F5E9;
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+
+        #dd:hover {
+            transform: scale(1.05);
+        }
+
+        #ee {
+            display: none;
+            font-size: 1.1em;
+        }
+
+        #dd.active #ee {
+            display: block;
+        }
+
+        #ff {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- navbar-->
+
+    <nav class="navbar navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <!-- <h1>🌱</h1> -->
+            <i id="b" class="fa-solid fa-seedling"></i>
+            <!-- <img id="e" src="KRISHAK.jpg" alt=""> -->
+            <h1 id="g">KRISHAK</h1>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
+                aria-label="Toggle navigation">
+                <h1>Menu <span class="navbar-toggler-icon"></span></h1>
+            </button>
+            <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+                aria-labelledby="offcanvasDarkNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">KRISHAK</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#"><span><i
+                                        class="fa-solid fa-house-user"></i> Home</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#"><span><i class="fa-solid fa-user"></i></span> My
+                                Profile</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#"><i class="fa-solid fa-phone-volume"></i> Talk to
+                                Expert</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#"><i class="fa-solid fa-language"></i> Select Language</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#"><i class="fa-solid fa-chart-line"></i> Terms of Use</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#"><i class="fa-solid fa-share-nodes"></i> Share and
+                                Earn</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex mt-3" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-success" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </nav><br><br><br><br><br>
+
+    <div id="aa">
+
+        <div id="bb" class="container">
+            <h1 id="cc">Learn About Agriculture 🌾</h1>
+
+            <div id="dd" class="section" onclick="toggleContent(this)">
+                <h2>🌱 Introduction</h2>
+                <div id="ee" class="content">
+                    <p>Agriculture is the cultivation of plants, animals, and fungi for food, fiber, medicine, and other
+                        products essential for human survival. It is one of the oldest practices, dating back thousands
+                        of years, and continues to evolve with modern technology and sustainable methods.</p>
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/NCp93xbSwWM"
+                        title="Understanding Soil" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <div id="dd" class="section" onclick="toggleContent(this)">
+                <h2>🌾 Types of Farming</h2>
+                <div id="ee" class="content">
+                    <h2>1.Subsistence Farming</h2>
+                    <ul>
+                        <li>- Small-scale farming where crops and livestock are grown for personal or local consumption.
+                        </li>
+                        <li>- Common in rural areas with limited resources.
+                        </li>
+                    </ul>
+
+                    <h2>2. Commercial Farming</h2>
+                    <ul>
+                        <li>Large-scale farming focused on producing crops and livestock for sale.</li>
+                        <li>Uses modern technology, fertilizers, and machinery for high yields.</li>
+                    </ul>
+
+                    <h2>
+                        3. Organic Farming
+                    </h2>
+                    <ul>
+                        <li>Avoids synthetic pesticides and fertilizers.</li>
+                        <li>Uses natural composting, crop rotation, and biological pest control.</li>
+                    </ul>
+
+                    <h2>4. Intensive Farming</h2>
+                    <ul>
+                        <li>Maximizes production on smaller land areas through heavy use of fertilizers and irrigation.
+                        </li>
+                        <li>Common in densely populated regions.</li>
+                    </ul>
+                    <h2>5. Extensive Farming</h2>
+                    <ul>
+                        <li>Large land areas with minimal input and labor.</li>
+                        <li>- Often used for livestock grazing or large-scale wheat production.
+                        </li>
+                    </ul>
+                    <h2>6. Smart Farming / Precision Agriculture</h2>
+                    <ul>
+                        <li>Uses IoT, AI, and sensors to optimize farming efficiency.</li>
+                        <li>- Includes automated irrigation, drone monitoring, and data-driven decisions.
+                        </li>
+                    </ul>
+
+                    <h2>7. Hydroponic & Vertical Farming</h2>
+                    <ul>
+                        <li>- Hydroponic Farming: Growing plants without soil using nutrient-rich solutions.
+                        </li>
+                        <li>- Vertical Farming: Stacked or indoor farms that optimize space and climate control.
+                        </li>
+                    </ul>
+                    <h2>8. Permaculture & Sustainable Farming</h2>
+                    <ul>
+                        <li>- Mimics natural ecosystems for self-sustaining farms.
+                        </li>
+                        <li>Focuses on water conservation, soil health, and biodiversity.</li>
+                    </ul>
+                    <h2>9. Mixed Farming</h2>
+                    <ul>
+                        <li>Cultivation of both crops and livestock in one system for balanced resource use.</li>
+                        <li>Reduces risks associated with single-type farming failures.</li>
+                    </ul>
+
+                    <h2>10. Aquaculture & Fish Farming</h2>
+                    <ul>
+                        <li>Breeding and harvesting fish and aquatic plants in controlled environments
+                        </li>
+                        <li>Supports food security and economic growth.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="dd" class="section" onclick="toggleContent(this)">
+                <h2>🌍 Sustainable Practices</h2>
+                <div id="ee" class="content">
+                    <p>Sustainable agricultural practices focus on preserving natural resources, improving soil health,
+                        and reducing environmental impact while ensuring long-term productivity. These methods help
+                        farmers cultivate land efficiently while maintaining biodiversity and ecological balance.
+                        Techniques such as crop rotation, organic farming, and agroforestry contribute to soil fertility
+                        and minimize degradation. Water conservation methods, including drip irrigation and rainwater
+                        harvesting, optimize water use and prevent wastage. Integrated pest management uses eco-friendly
+                        pest control strategies to protect crops without harming beneficial organisms. Additionally,
+                        technological advancements like AI-powered monitoring systems and precision farming improve
+                        resource efficiency and reduce pollution. Sustainable livestock farming promotes ethical
+                        practices and rotational grazing to enhance land health. These approaches collectively support
+                        food security while reducing carbon footprint, making agriculture more resilient to climate
+                        change and beneficial for future generations. 🌱</p>
+                    <img id="ff" src="learn.jpg" alt="">
+                </div>
+            </div>
+
+            <div id="dd" class="section" onclick="toggleContent(this)">
+                <h2>🚜 Modern Agricultural Technology</h2>
+                <div id="ee" class="content">
+                    <p>Modern agriculture technology is transforming farming with innovative tools and data-driven
+                        techniques to improve efficiency, productivity, and sustainability. 🌾🚜 <br>
+                        Precision agriculture uses sensors, AI, and GPS systems to optimize planting, irrigation, and
+                        harvesting. Farmers can analyze soil conditions, monitor crop health, and apply fertilizers only
+                        where needed, reducing waste and environmental impact. Drones and satellite imaging provide
+                        real-time field analysis, helping detect diseases and predict weather changes. <br>
+                        Hydroponics and vertical farming allow crops to grow without soil, using nutrient-rich water
+                        solutions and stacked layers in urban environments. These technologies maximize space and
+                        resource efficiency, especially in regions with limited arable land. Smart irrigation systems,
+                        like drip irrigation and automated sprinklers, conserve water by delivering the precise amount
+                        needed for each plant. <br>
+                        AI-powered robotic harvesters automate picking, sorting, and packaging crops, reducing labor
+                        costs and increasing speed. Autonomous tractors and smart farming equipment can plant, plow, and
+                        spray fields with high precision. Additionally, biotechnology enables genetically improved seeds
+                        that are resistant to drought, pests, and diseases. <br>
+                        These innovations enhance food security, reduce environmental impact, and increase productivity,
+                        making modern agriculture more efficient and sustainable for the future. Want to integrate these
+                        concepts into a visually creative webpage? I’d love to help design an interactive farming tech
+                        showcase! 🚀
+                    </p>
+                    <img id="ff" src="learn2.webp" alt="">
+                </div>
+            </div>
+        </div>
+
+    </div><br><br><br><br><br><br>
+    <!-- footer -->
+    <footer class="foot">
+        <a href="{{ url_for('home') }}" class="footer-icon"><i class="fa-solid fa-house"></i><span id="f">Home</span></a>
+        <a href="crop_care.html" class="footer-icon"><i class="fa-solid fa-seedling"></i><span id="f">Crop
+                Care</span></a>
+         <a href="/market" class="footer-icon"><i class="fa-solid fa-store"></i><span id="f">Market View</span></a>
+        <a href="#" class="footer-icon"><i class="fa-solid fa-link"></i><span id="f">Connect</span></a>
+        <a href="#" class="footer-icon"><i class="fa-solid fa-users"></i><span id="f">Community</span></a>
+        <a href="#" class="footer-icon"><i class="fa-solid fa-user"></i><span id="f">Profile</span></a>
+        <a href="#" class="footer-icon"><i class="fa-solid fa-bell"></i><span id="f">Notification</span></a>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+        crossorigin="anonymous"></script>
+
+    <script>
+        function toggleContent(element) {
+            element.classList.toggle("active");
+        }
+    </script>
+
+</body>
+
+</html>

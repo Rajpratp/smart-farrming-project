@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+
+ <!-- google font for moto -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Carter+One&display=swap" rel="stylesheet">
+
+                                     <!-- bootstrap link-->
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+
+                                     <!--Fontawesome link-->
+
+  <script src="https://kit.fontawesome.com/ac6870aa6c.js" crossorigin="anonymous"></script>
+
+                                     <!--css link -->
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css.css') }}">
+
+  <style>
+          
+
+  </style>
+
+</head>
+
+<body>
+  <div id="a">
+
+                                     <!-- navbar-->
+    
+    <nav class="navbar navbar-dark bg-dark fixed-top">
+      <div class="container-fluid">
+        <!-- <h1>🌱</h1> -->
+          <i id="b" class="fa-solid fa-seedling"></i> 
+          <!-- <img id="e" src="KRISHAK.jpg" alt=""> -->
+          <h2 id="g">KRISHAK</h2> 
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
+          aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+          <h1>Menu <span class="navbar-toggler-icon"></span></h1>                      
+          </button>
+          <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+          aria-labelledby="offcanvasDarkNavbarLabel">
+          <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">KRISHAK CORNER</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+          aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="{{ url_for('home') }}"><span><i class="fa-solid fa-house-user"></i>  Home</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#"><span><i class="fa-solid fa-user"></i></span>  My Profile</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#"><i class="fa-solid fa-phone-volume"></i> Talk to Expert</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#"><i class="fa-solid fa-language"></i> Select Language</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#"><i class="fa-solid fa-chart-line"></i> Terms of Use</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#"><i class="fa-solid fa-share-nodes"></i> Share and Earn</a>
+              </li>
+            </ul>
+            <form class="d-flex mt-3" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div><br><br><br>
+
+<!-- <div id="c">
+<img id="d"  src="" alt=""> 
+</div><br><br> -->
+<br>
+<h3 class="moto" ><center>We serve those who serve the Nation.</center></h3>
+<!-- Rectangular box after navbar -->
+<div class="after-navbar-box">
+  <div id="slider-content">
+    <div class="slider-item" style="background-image: url('/static/welcome.jpg');">
+      <span class="slider-text">Welcome to Krishak! Empowering farmers every day.</span>
+    </div>
+    <div class="slider-item" style="background-image: url('/static/market.avif');">
+      <span class="slider-text">Check today’s market prices and trends.</span>
+    </div>
+    <div class="slider-item" style="background-image: url('/static/weather.jpg');">
+      <span class="slider-text">🌦️ Weather updates: Plan your irrigation smartly.</span>
+    </div>
+    <div class="slider-item" style="background-image: url('/static/community.jpg');">
+      <span class="slider-text"> Join the community :work together , grow together!</span>
+    </div>
+    <div class="slider-item" style="background-image: url('/static/health.jpg');">
+      <span class="slider-text">we make sure health of you and yours!</span>
+    </div>
+  </div>
+</div>
+
+<div class="container" id="eeeee">
+  <div class="box"><a href="soil.html" id="h"><i class="fa-solid fa-seedling"></i>Soil</a></div>
+  <div class="box" id="weather-box">
+  <a href="{{ url_for('weather') }}" id="h">
+    <i class="fa-solid fa-cloud"></i>
+    <span id="weather-info">Weather</span>
+  </a>
+  </div>
+  <div class="box"><a href="{{ url_for('health') }}" id="h"><i class="fa-solid fa-bacteria"></i>Health</a></div>
+  <div class="box"><a href="{{ url_for('learn') }}" id="h"><i class="fa-solid fa-comment"></i>Learn</a></div>
+  <div class="box"><a href="fertilizer.html" id="h"><i class="fa-regular fa-arrow-trend-up"></i>Fertilizer</a></div>
+  <div class="box"><a href="tools.html" id="h"><i class="fa-solid fa-screwdriver-wrench"></i>Tools</a></div>
+</div>
+
+<div class="container" id="zz">
+  <div id="yy">
+      <p>This app can serve as a valuable tool for farmers, agronomists, and enthusiasts by integrating technology into farming practices.</p>
+      <h2>Purpose & Features</h2>
+      <p>This Agriculture app are designed to improve efficiency, sustainability, and productivity in farming. Depending on the target audience, they may include:</p>
+      <ul>
+        <li>Soil Health Analysis – Using image recognition or sensor data to assess soil quality.
+        </li>
+        <li>Crop Monitoring & Pest Detection – AI-based insights to help farmers detect plant diseases early.
+        </li>
+        <li>Weather Forecasts – Real-time weather updates to assist in planning irrigation and harvesting.
+        </li>
+        <li>Market Price Tracking – Information on current crop prices to help farmers make informed decisions.
+        </li>
+        <li>Community & Learning Hub – Farmers can share insights, ask questions, and access tutorials.
+        </li>
+        
+      </ul>
+  </div>
+  <div id="xx">
+    <img id="ww" src="/static/smartFarm.jpg" alt="Soil Profile">
+  </div>
+</div>
+
+                                     <!-- footer -->
+
+<footer>
+  <div class="footer-container">
+      <ul class="footer-links">
+          <li><a href="help.html">Help</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="mailto:patidarpritam600@gmail.com">Email Us</a></li>
+          <li><a href="https://www.instagram.com/invites/contact/?utm_source=ig_contact_invite&utm_medium=copy_link&utm_content=isto8mi"><i class="fa-brands fa-instagram"></i></a></li>
+          <li><a href="https://x.com/Mahakal18404278?t=kuV5SqLvEhhLygaMC7KrNg&s=09"><i class="fa-brands fa-x-twitter"></i></a></li>
+      </ul>
+  </div>
+</footer>
+
+                                    <!-- navigation -->
+
+<footer class="foot">
+  <a href="{{ url_for('home') }}" class="footer-icon"><i class="fa-solid fa-house"></i><span id="f">Home</span></a>
+  <a href="crop_care.html" class="footer-icon"><i class="fa-solid fa-seedling"></i><span id="f">Crop Care</span></a>
+  <a href="/market" class="footer-icon"><i class="fa-solid fa-store"></i><span id="f">Market View</span></a>
+  <a href="#" class="footer-icon"><i class="fa-solid fa-link"></i><span id="f">Connect</span></a>
+  <a href="#" class="footer-icon"><i class="fa-solid fa-users"></i><span id="f">Community</span></a>
+   <a href="#" class="footer-icon"><i class="fa-solid fa-bell"></i><span id="f">Notification</span></a>
+  <a href="#" class="footer-icon"><i class="fa-solid fa-user"></i><span id="f">Profile</span></a>
+ 
+</footer>
+
+<!-- Chatbot Button and Window -->
+<div id="chatbot-container">
+  <button id="chatbot-toggle">
+    <i class="fa-solid fa-comments"></i>
+  </button>
+  <div id="chatbot-window">
+    <div id="chatbot-header">Chat with KRISHAK buddy! <span id="chatbot-close">&times;</span></div>
+    <div id="chatbot-messages">
+      <div class="chatbot-message bot">का हाल बा! How can I help you today?</div>
+    </div>
+    <input type="text" id="chatbot-input" placeholder="Type your message..." autocomplete="off"/>
+  </div>
+</div>
+
+<!-- JavaScript for slider functionality -->
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
